@@ -1,0 +1,312 @@
+/* Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 */
+/* Course: CSC307 Web Design and Programming */
+/* Instructor: Dr. Farid Ibrahim */
+
+/* Styles for the moving logo */
+        .logo {
+            position: absolute;;
+            top: 50px;
+            right: 2px;
+            width: 150px;
+            height: auto;
+            animation: moveLogo2 5s infinite;
+        }
+
+        @keyframes moveLogo2 {
+            0% {
+                transform: translate(0, -10px);
+            }
+            25% {
+                transform: translate(-50px, -50px);
+            }
+            50% {
+                transform: translate(-100px, -10px);
+            }
+            75% {
+                transform: translate(-50px, 30px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: blue;
+        }
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+.content, .interactive, .quiz, .exercises {
+    margin-bottom: 2rem;
+}
+
+.content h2, .interactive h3, .quiz h3, .exercises h3 {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.interactive p, .quiz p, .exercises p{
+    font-weight: bold;
+}
+
+pre {
+    background-color: #e2e2e2;
+    padding: 1rem;
+    overflow: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+}
+
+/* Hero Section */
+        .hero {
+            background-image: url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            transition: transform 2s;
+        }
+
+        .hero:hover {
+            transform: scale(0.95);
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 20px 300px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .features h2 {
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features ul li {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .features ul li:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+
+        .features ul li .feature-details {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+        }
+
+        .features ul li:hover .feature-details {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
+        }
+
+        .features ul li .feature-details img {
+            max-width: 100%;
+        }
+
+        /* Statistics Section */
+        .statistics {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .statistics h2 {
+            margin-bottom: 20px;
+        }
+
+        .statistics .stat {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            font-size: 2em;
+        }
+
+
+
+
+
+
+
+.interactive input, .interactive button {
+    display: block;
+    margin: 1rem 0;
+}
+
+.quiz form {
+    margin: 1rem 0;
+}
+
+.quiz button {
+    display: block;
+    margin-top: 1rem;
+}
+
+.exercise {
+    margin-bottom: 1rem;
+}
+
+.exercise details {
+    margin-top: 1rem;
+    background-color: #e2e2e2;
+    padding: 0.5rem;
+    border-left: 5px solid #4CAF50;
+}
+
+/* External Style Example */
+.external-style {
+    color: green;
+}
+
+/* Floating div example */
+.float-left {
+    float: left;
+}
+.clear-both {
+    clear: both;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Chapter 5 Specific Styles */
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-corners {
+    border-radius: 15px;
+}
+
+.box-shadow {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.linear-gradient {
+    background: linear-gradient(to right, red, yellow);
+}
+
+.radial-gradient {
+    background: radial-gradient(circle, blue, green);
+}
+
+.multiple-backgrounds {
+    background: url('images/5bg1.jpg'), url('images/5bg2.jpg');
+}
+
+@keyframes example {
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: red;}
+}
+
+.simple-animation {
+    animation: example 5s infinite;
+}
+
+.simple-transition {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: width 2s, height 2s, background-color 2s;
+}
+
+.simple-transition:hover {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}

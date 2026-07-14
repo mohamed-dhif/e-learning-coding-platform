@@ -1,0 +1,70 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Renderer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the form and output */
+        .form-container {
+            margin: 20px;
+        }
+
+        .output-container {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .output {
+            white-space: pre-wrap; /* Preserve whitespace */
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>HTML Renderer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Enter HTML Code</h2>
+            <form id="htmlForm">
+                <textarea id="htmlInput" rows="10" cols="50" placeholder="Write your HTML code here" style="width: 100%; height: 400px; font-size: 15px;"></textarea><br>
+                <button type="button" onclick="renderHTML()">Render HTML</button>
+            </form>
+        </section>
+        <section class="output-container">
+            <h2>Rendered Output</h2>
+            <div id="output" class="output"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+
+</body>
+</html>

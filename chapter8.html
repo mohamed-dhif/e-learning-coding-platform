@@ -1,0 +1,304 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Advanced JavaScript Loops and Control Statements</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 8: Advanced JavaScript Loops and Control Statements</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+                <!-- Add links to other chapters as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>The <code>for</code> Loop</h2>
+            <p>The <code>for</code> loop is used to repeat a block of code a specified number of times. It is commonly used for iterating over arrays and other iterable objects.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    for (var i = 0; i < 5; i++) {
+        console.log("Iteration " + i);
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>The <code>switch</code> Statement</h2>
+            <p>The <code>switch</code> statement is used to perform different actions based on different conditions.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+    console.log("Today is " + day);
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>The <code>do...while</code> Loop</h2>
+            <p>The <code>do...while</code> loop is similar to the <code>while</code> loop, but it executes the code block once before checking the condition, and then repeats the loop as long as the specified condition is true.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var i = 0;
+    do {
+        console.log("Iteration " + i);
+        i++;
+    } while (i < 5);
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>The <code>break</code> and <code>continue</code> Statements</h2>
+            <p>The <code>break</code> statement is used to exit a loop or a switch statement. The <code>continue</code> statement skips the rest of the code in the current iteration and moves to the next iteration of the loop.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    for (var i = 0; i < 10; i++) {
+        if (i === 3) { break; }
+        console.log("Iteration " + i);
+    }
+
+    for (var j = 0; j < 10; j++) {
+        if (j === 3) { continue; }
+        console.log("Iteration " + j);
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter a number and see the iterations in a <code>for</code> loop:</p>
+            <input type="number" id="forLoopInput" placeholder="Enter a number">
+            <button onclick="showForLoopIterations()">Show Iterations</button>
+            <p id="forLoopResult"></p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of advanced JavaScript loops and control statements:</p>
+            <form id="quizForm">
+                <p>1. What is the correct syntax for a <code>for</code> loop?</p>
+                <input type="radio" name="question1" value="a"> <code>for (i = 0; i < 5; i++)</code><br>
+                <input type="radio" name="question1" value="b"> <code>for i = 1 to 5</code><br>
+                <input type="radio" name="question1" value="c"> <code>for (i <= 5; i++)</code><br>
+
+                <p>2. What is the correct syntax for a <code>switch</code> statement?</p>
+                <input type="radio" name="question2" value="a"> <code>switch (expression) { case x: break; }</code><br>
+                <input type="radio" name="question2" value="b"> <code>switch (expression) { case x: }</code><br>
+                <input type="radio" name="question2" value="c"> <code>switch { case x: }</code><br>
+
+                <button type="button" onclick="checkQuiz(8)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create an HTML page with a JavaScript <code>for</code> loop that prints numbers from 1 to 10.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript for Loop&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        for (var i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page with a JavaScript <code>switch</code> statement that prints the name of the day based on a number input (1-7).</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript switch Statement&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        var dayNumber = 3; // Example number
+        var day;
+        switch (dayNumber) {
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            case 7:
+                day = "Sunday";
+                break;
+            default:
+                day = "Invalid day";
+        }
+        console.log("Day: " + day);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>3. Create an HTML page with a JavaScript <code>do...while</code> loop that prints numbers from 1 to 5.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript do...while Loop&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        var i = 1;
+        do {
+            console.log(i);
+            i++;
+        } while (i <= 5);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>4. Create an HTML page with a JavaScript <code>break</code> statement that exits a loop when a condition is met.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript break Statement&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        for (var i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            console.log("Iteration " + i);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>5. Create an HTML page with a JavaScript <code>continue</code> statement that skips the rest of the loop iteration when a condition is met.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript continue Statement&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        for (var j = 0; j < 10; j++) {
+            if (j === 3) { continue; }
+            console.log("Iteration " + j);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

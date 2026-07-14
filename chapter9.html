@@ -1,0 +1,233 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9: JavaScript Functions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 9: JavaScript Functions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <!-- Add links to other chapters as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Introduction to Functions</h2>
+            <p>Functions are blocks of code designed to perform a specific task. A function is executed when something invokes it (calls it).</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    function myFunction() {
+        console.log("Hello, world!");
+    }
+    myFunction();
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Creating Functions</h2>
+            <p>Functions are defined using the <code>function</code> keyword, followed by a name, parentheses, and a block of code enclosed in curly braces.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    function add(a, b) {
+        return a + b;
+    }
+    console.log(add(5, 3)); // Outputs: 8
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Scopes</h2>
+            <p>JavaScript has function scope and block scope. Variables defined inside a function are not accessible from outside the function.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    function scopeExample() {
+        var localVar = "I'm local";
+        console.log(localVar);
+    }
+    scopeExample();
+    console.log(localVar); // Error: localVar is not defined
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Recursion</h2>
+            <p>Recursion is a technique where a function calls itself. This is useful for tasks that can be broken down into similar subtasks.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    function factorial(n) {
+        if (n === 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+    console.log(factorial(5)); // Outputs: 120
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Random Dice Roll Example</h2>
+            <p>This example demonstrates a function that simulates rolling a six-sided dice.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    function rollDice() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+    console.log("You rolled a " + rollDice());
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Click the button to roll a dice:</p>
+            <button onclick="showDiceRoll()">Roll Dice</button>
+            <p id="diceResult"></p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of JavaScript functions:</p>
+            <form id="quizForm">
+                <p>1. What is the correct syntax for defining a function?</p>
+                <input type="radio" name="question1" value="a"> <code>function myFunction() { }</code><br>
+                <input type="radio" name="question1" value="b"> <code>function: myFunction() { }</code><br>
+                <input type="radio" name="question1" value="c"> <code>function = myFunction() { }</code><br>
+
+                <p>2. What will the following code output?</p>
+                <pre><code>
+function test() {
+    var x = 1;
+}
+console.log(x);
+                </code></pre>
+                <input type="radio" name="question2" value="a"> <code>1</code><br>
+                <input type="radio" name="question2" value="b"> <code>undefined</code><br>
+                <input type="radio" name="question2" value="c"> <code>Error: x is not defined</code><br>
+
+                <button type="button" onclick="checkQuiz(9)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create a function that calculates the square of a number.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Calculate Square&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function square(x) {
+            return x * x;
+        }
+        console.log(square(4)); // Outputs: 16
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create a function that returns the larger of two numbers.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Find Larger Number&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function max(a, b) {
+            return (a > b) ? a : b;
+        }
+        console.log(max(5, 10)); // Outputs: 10
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>3. Create a function that returns the factorial of a number using recursion.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Factorial Function&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        console.log(factorial(5)); // Outputs: 120
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

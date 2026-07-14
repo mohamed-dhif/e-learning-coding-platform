@@ -1,0 +1,313 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Basic HTML5 Elements</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 2: Basic HTML5 Elements</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Headings</h2>
+            <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. Each level represents a different degree of importance:</p>
+            <pre>
+                <code>
+&lt;h1&gt;This is a heading level 1&lt;/h1&gt;
+&lt;h2&gt;This is a heading level 2&lt;/h2&gt;
+&lt;h3&gt;This is a heading level 3&lt;/h3&gt;
+&lt;h4&gt;This is a heading level 4&lt;/h4&gt;
+&lt;h5&gt;This is a heading level 5&lt;/h5&gt;
+&lt;h6&gt;This is a heading level 6&lt;/h6&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <h1 style="color:black">This is a heading level 1</h1>
+            <h2 style="color:black">This is a heading level 2</h2>
+            <h3 style="color:black">This is a heading level 3</h3>
+            <h4 style="color:black">This is a heading level 4</h4>
+            <h5 style="color:black">This is a heading level 5</h5>
+            <h6 style="color:black">This is a heading level 6</h6>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2 id="links">Links</h2>
+            <p>Links are created using the <code>&lt;a&gt;</code> tag. A hyperlink can be inserted into an HTML5 document using the following syntax:</p>
+            <pre>
+                <code>
+&lt;a href="http://www.example.com"&gt;Click here&lt;/a&gt;
+                </code>
+            </pre>
+            <p>The <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+            <p><strong>Result:</strong></p>
+            <p><a href="http://www.example.com">Click here</a> to visit example.com</p>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Images</h2>
+            <p>HTML5 allows you to embed images using the <code>&lt;img&gt;</code> tag. Images are used to enhance the visual appearance of a webpage. Here's how to include an image:</p>
+            <pre>
+                <code>
+&lt;img src="path/to/image.jpg" alt="Description of image"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <img src="images/example.png" alt="Example Image" height="200px">
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Specialized Characters and Horizontal Rules</h2>
+            <p>HTML provides ways to include special characters and horizontal rules:</p>
+            <pre>
+                <code>
+&lt;p&gt;This is an example of using &amp;copy; to display © symbol.&lt;/p&gt;
+&lt;hr&gt; <!-- Horizontal Rule -->
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <p>This is an example of using &copy; to display © symbol.</p>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Lists</h2>
+            <p>HTML5 supports both ordered and unordered lists:</p>
+            <pre>
+                <code>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+    &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Tables</h2>
+            <p>HTML5 allows you to create tables to display data in a structured format:</p>
+            <pre>
+                <code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <table border="1 solid">
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                </tr>
+            </table>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Basic Forms</h2>
+            <p>HTML5 allows the creation of forms to collect user input:</p>
+            <pre>
+                <code>
+&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <input type="submit" value="Submit">
+            </form>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Internal Linking</h2>
+            <p>Internal links allow navigation within the same webpage:</p>
+            <pre>
+                <code>
+&lt;a href="#top"&gt;Back to Top&lt;/a&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <a href="#top">Back to Top</a>
+            <hr>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter a URL to create a link:</p>
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <button onclick="showLink()">Show Link</button>
+            <p id="link"></p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of basic HTML5 elements:</p>
+            <form id="quizForm">
+                <p>1. Which HTML tag is used to create a hyperlink?</p>
+                <input type="radio" name="question1" value="a"> <code>&lt;a&gt;</code><br>
+                <input type="radio" name="question1" value="b"> <code>&lt;link&gt;</code><br>
+                <input type="radio" name="question1" value="c"> <code>&lt;href&gt;</code><br>
+
+                <p>2. How do you create an unordered list in HTML?</p>
+                <input type="radio" name="question2" value="a"> <code>&lt;ul&gt;</code><br>
+                <input type="radio" name="question2" value="b"> <code>&lt;ol&gt;</code><br>
+                <input type="radio" name="question2" value="c"> <code>&lt;li&gt;</code><br>
+
+                <button type="button" onclick="checkQuiz(2)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create a simple HTML5 page with headings, links, and images.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Simple Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;Visit &lt;a href="http://www.example.com"&gt;Example&lt;/a&gt;.&lt;/p&gt;
+    &lt;img src="path/to/image.jpg" alt="Example Image"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML5 page with a list, table, and form.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;List, Table, and Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;form&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>3. Create an HTML5 page with specialized characters and horizontal rules.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Special Characters and HR&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;This is an example of using &amp;copy; to display © symbol.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;This is an example of using &amp;reg; to display ® symbol.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

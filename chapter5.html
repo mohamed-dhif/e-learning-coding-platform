@@ -1,0 +1,288 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Advanced CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 5: Advanced CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Text Shadows</h2>
+            <p>Text shadows add depth and emphasis to text:</p>
+            <pre>
+                <code>
+/* CSS */
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                </code>
+            </pre>
+            <p style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">This is an example of text shadow.</p>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Rounded Corners</h2>
+            <p>Rounded corners make elements look softer and more modern:</p>
+            <pre>
+                <code>
+/* CSS */
+border-radius: 15px;
+                </code>
+            </pre>
+            <div style="width: 100px; height: 100px; background-color: lightblue; border-radius: 15px;">
+                This div has rounded corners.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Box Shadows</h2>
+            <p>Box shadows create a sense of depth around elements:</p>
+            <pre>
+                <code>
+/* CSS */
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                </code>
+            </pre>
+            <div style="width: 100px; height: 100px; background-color: lightgray; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                This div has a box shadow.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Linear Gradients</h2>
+            <p>Linear gradients transition smoothly between colors along a line:</p>
+            <pre>
+                <code>
+/* CSS */
+background: linear-gradient(to right, red, yellow);
+                </code>
+            </pre>
+            <div style="width: 200px; height: 100px; background: linear-gradient(to right, red, yellow);">
+                This div has a linear gradient background.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Radial Gradients</h2>
+            <p>Radial gradients transition smoothly between colors radiating from a central point:</p>
+            <pre>
+                <code>
+/* CSS */
+background: radial-gradient(circle, blue, green);
+                </code>
+            </pre>
+            <div style="width: 200px; height: 100px; background: radial-gradient(circle, blue, green);">
+                This div has a radial gradient background.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Multiple Background Images</h2>
+            <p>CSS allows you to set multiple background images for an element:</p>
+            <pre>
+                <code>
+/* CSS */
+background: url('images/5bg1.jpg'), url('images/5bg2.jpg');
+                </code>
+            </pre>
+            <div style="width: 200px; height: 100px; background: url('images/5bg1.jpg'), url('images/5bg2.jpg');">
+                This div has multiple background images.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Image Borders</h2>
+            <p>CSS allows you to set an image as a border for an element:</p>
+            <pre>
+                <code>
+/* CSS */
+border-image: url('images/5bg1.jpg') 30 30 round;
+                </code>
+            </pre>
+            <div style="width: 100px; height: 100px; border: 10px solid; border-image: url('images/5bg1.jpg') 30 30 round;">
+                This div has an image border.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Simple Animation</h2>
+            <p>CSS allows you to create simple animations using the <code>@keyframes</code> rule:</p>
+            <pre>
+                <code>
+/* CSS */
+@keyframes example {
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: red;}
+}
+.simple-animation {
+    animation: example 5s infinite;
+}
+                </code>
+            </pre>
+            <div class="simple-animation" style="width: 100px; height: 100px;">This div has a simple animation.</div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Simple Transition</h2>
+            <p>CSS allows you to create simple transitions for changes in CSS properties:</p>
+            <pre>
+                <code>
+        /* CSS */
+        .simple-transition {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 2s, height 2s, background-color 2s;
+        }
+        .simple-transition:hover {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+                </code>
+            </pre>
+            <div class="simple-transition">
+                Hover over this div to see the transition effect.
+            </div>
+            <hr>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter a color to apply as text shadow:</p>
+            <input type="color" id="textShadowColor" name="textShadowColor">
+            <button onclick="applyTextShadow()">Apply Text Shadow</button>
+            <p id="shadowText">This text will have a shadow.</p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of advanced CSS:</p>
+            <form id="quizForm">
+                <p>1. Which CSS property is used to create rounded corners?</p>
+                <input type="radio" name="question1" value="a"> <code>border-radius</code><br>
+                <input type="radio" name="question1" value="b"> <code>box-shadow</code><br>
+                <input type="radio" name="question1" value="c"> <code>background</code><br>
+
+                <p>2. Which CSS rule is used to create animations?</p>
+                <input type="radio" name="question2" value="a"> <code>@keyframes</code><br>
+                <input type="radio" name="question2" value="b"> <code>transition</code><br>
+                <input type="radio" name="question2" value="c"> <code>animation</code><br>
+
+                <button type="button" onclick="checkQuiz(5)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create a simple HTML page demonstrating text shadows and box shadows.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Text and Box Shadows&lt;/title&gt;
+    &lt;style&gt;
+        .text-shadow {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .box-shadow {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="text-shadow"&gt;This text has a shadow.&lt;/p&gt;
+    &lt;div class="box-shadow"&gt;This box has a shadow.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page demonstrating simple animations and transitions.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Animations and Transitions&lt;/title&gt;
+    &lt;style&gt;
+        @keyframes example {
+            0% {background-color: red;}
+            50% {background-color: yellow;}
+            100% {background-color: red;}
+        }
+        .simple-animation {
+            animation: example 5s infinite;
+        }
+        .transition {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 2s, height 2s, background-color 2s;
+        }
+        .transition:hover {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="simple-animation"&gt;This box has an animation.&lt;/div&gt;
+    &lt;div class="transition"&gt;Hover over this box to see the transition.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

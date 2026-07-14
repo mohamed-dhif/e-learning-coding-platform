@@ -1,0 +1,174 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Introduction to Control Statements</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 7: Introduction to Control Statements</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+                <!-- Add links to other chapters as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Introduction to Control Statements</h2>
+            <p>Control statements in JavaScript allow you to control the flow of execution of your code based on conditions and loops.</p>
+        </section>
+
+        <section class="content">
+            <h2>The <code>if</code> Statement</h2>
+            <p>The <code>if</code> statement is used to execute a block of code only if a specified condition is true.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var x = 10;
+    if (x > 5) {
+        console.log("x is greater than 5");
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>The <code>if...else</code> Statement</h2>
+            <p>The <code>if...else</code> statement executes one block of code if a condition is true and another block of code if the condition is false.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var x = 10;
+    if (x > 5) {
+        console.log("x is greater than 5");
+    } else {
+        console.log("x is not greater than 5");
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>The <code>while</code> Loop</h2>
+            <p>The <code>while</code> loop repeats a block of code as long as a specified condition is true.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var i = 0;
+    while (i < 5) {
+        console.log("Iteration " + i);
+        i++;
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter a number and see if it is greater than 10:</p>
+            <input type="number" id="controlInput" placeholder="Enter a number">
+            <button onclick="checkNumber()">Check Number</button>
+            <p id="controlResult"></p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of control statements:</p>
+            <form id="quizForm">
+                <p>1. What is the correct syntax for an <code>if</code> statement?</p>
+                <input type="radio" name="question1" value="a"> <code>if (x > y) { }</code><br>
+                <input type="radio" name="question1" value="b"> <code>if x > y { }</code><br>
+                <input type="radio" name="question1" value="c"> <code>if (x > y) then { }</code><br>
+
+                <p>2. What is the correct syntax for a <code>while</code> loop?</p>
+                <input type="radio" name="question2" value="a"> <code>while i < 5</code><br>
+                <input type="radio" name="question2" value="b"> <code>while (i < 5)</code><br>
+                <input type="radio" name="question2" value="c"> <code>while (i <= 5)</code><br>
+
+                <button type="button" onclick="checkQuiz(7)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create an HTML page with a JavaScript <code>if</code> statement that checks if a number is positive.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript if Statement&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        var number = 5;
+        if (number > 0) {
+            console.log("The number is positive");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page with a JavaScript <code>while</code> loop that prints numbers from 1 to 5.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript while Loop&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        var i = 1;
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

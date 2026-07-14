@@ -1,0 +1,121 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Web Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Styles for the moving logo */
+        .logo {
+            position: absolute;
+            top: 50px;
+            right: 2px;
+            width: 150px;
+            height: auto;
+            animation: moveLogo 5s infinite;
+        }
+
+        @keyframes moveLogo {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-50px, -50px);
+            }
+            50% {
+                transform: translate(-100px, 0);
+            }
+            75% {
+                transform: translate(-50px, 50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Web Design 101</h1>
+        <nav>
+            <ul>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+                <li><a href="html_renderer.html">HTML Renderer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Learn Web Design from Scratch</h2>
+            <p>This website is designed to teach you the fundamentals of web design. Each chapter covers a different aspect of web design, including HTML5, CSS3, and JavaScript.</p>
+        </section>
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>
+                    The Complete Web Design Basics
+                    <div class="feature-details">
+                        <img src="images/feat1.png" alt="Web Design Basics">
+                    </div>
+                </li>
+                <li>
+                    Code Explanation With Interactive Examples
+                    <div class="feature-details">
+                        <img src="images/feat2.png" alt="Code Explanation">
+                    </div>
+                </li>
+                <li>
+                    Quizzes to Test Your Knowledge
+                    <div class="feature-details">
+                        <img src="images/feat3.png" alt="Quizzes">
+                    </div>
+                </li>
+                <li>
+                    Exercises to Try on Your Own!
+                    <div class="feature-details">
+                        <img src="images/feat4.png" alt="Exercises">
+                    </div>
+                </li>
+                <li>
+                    Test Simple Code Snippets in The Browser!
+                    <div class="feature-details">
+                        <img src="images/feat5.png" alt="Exercises">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <h2>Our Goals</h2>
+            <div class="stat">500+ Students</div>
+            <div class="stat">100+ Projects</div>
+            <div class="stat">50+ Tutorials</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course. All rights reserved.</p>
+    </footer>
+    <!-- Logo Image -->
+    <img src="images/logo.png" alt="Logo" class="logo">
+
+</body>
+</html>

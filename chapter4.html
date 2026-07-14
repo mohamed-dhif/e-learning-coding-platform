@@ -1,0 +1,308 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Introduction to CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .inline-style {
+            color: red;
+        }
+        .embedded-style {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chapter 4: Introduction to CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Difference between Inline, Embedded, and External Style Sheets</h2>
+            <p>CSS can be applied to HTML documents in three ways:</p>
+            <ul>
+                <li><strong>Inline Style Sheet:</strong> Uses the <code>style</code> attribute directly in HTML elements.</li>
+                <li><strong>Embedded Style Sheet:</strong> Uses the <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section of the HTML document.</li>
+                <li><strong>External Style Sheet:</strong> Uses the <code>&lt;link&gt;</code> tag to link an external CSS file.</li>
+            </ul>
+            <p><strong>Inline Style Example:</strong></p>
+            <pre>
+                <code>
+&lt;p style="color: red;"&gt;This is an inline styled paragraph.&lt;/p&gt;
+                </code>
+            </pre>
+            <p style="color: red;">This is an inline styled paragraph.</p>
+            <hr>
+
+            <p><strong>Embedded Style Example:</strong></p>
+            <pre>
+                <code>
+&lt;style&gt;
+    .embedded-style {
+        color: blue;
+    }
+&lt;/style&gt;
+&lt;p class="embedded-style"&gt;This is an embedded styled paragraph.&lt;/p&gt;
+                </code>
+            </pre>
+            <p class="embedded-style">This is an embedded styled paragraph.</p>
+            <hr>
+
+            <p><strong>External Style Example:</strong></p>
+            <pre>
+                <code>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;p class="external-style"&gt;This is an external styled paragraph.&lt;/p&gt;
+                </code>
+            </pre>
+            <p class="external-style">This is an external styled paragraph.</p>
+        </section>
+
+        <section class="content">
+            <h2>CSS Basics</h2>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages. Below are some basic CSS attributes:</p>
+            <img src="images/cssattributes.png" alt="CSS Attributes">
+            <p>Colors in CSS can be specified in various ways, such as using color names, HEX values, RGB values, etc.:</p>
+            <pre>
+                <code>
+/* Color names */
+color: red;
+
+/* HEX values */
+color: #ff0000;
+
+/* RGB values */
+color: rgb(255, 0, 0);
+                </code>
+            </pre>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Positioning Elements</h2>
+            <p>CSS positioning properties allow you to position elements on a web page in different ways. The two main types of positioning are absolute and relative:</p>
+            <h3>Absolute Positioning</h3>
+            <pre>
+                <code>
+.absolute {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div style="position: relative; height: 200px; border: 1px solid #000;">
+                <div class="absolute" style="position: absolute; top: 50px; left: 100px; background-color: lightgray;">This is an absolutely positioned element.</div>
+            </div>
+            <hr>
+
+            <h3>Relative Positioning</h3>
+            <pre>
+                <code>
+.relative {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div style="position: relative; height: 200px; border: 1px solid #000;">
+                <img src="images/example.png" height="100px">
+                <div class="relative" style="position: relative; top: 20px; left: 30px; background-color: lightgray;">This is a relatively positioned element.</div>
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Backgrounds</h2>
+            <p>CSS provides various properties to style the background of an element:</p>
+            <pre>
+                <code>
+background-color: lightblue;
+background-image: url('images/example2.png');
+background-repeat: no-repeat;
+background-size: cover;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div style="width: 300px; height: 200px; background-color: lightblue; background-image: url('images/example2.png'); background-repeat: no-repeat; background-size: cover;">
+                This div has a background image and color.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Element Dimensions</h2>
+            <p>You can set the width and height of an element using the <code>width</code> and <code>height</code> properties:</p>
+            <pre>
+                <code>
+width: 200px;
+height: 100px;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div style="width: 200px; height: 100px; background-color: lightgray;">
+                This div has a width of 200px and a height of 100px.
+            </div>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Box Model and Text Flow</h2>
+            <p>The CSS box model is used to define the layout and design of elements. It consists of margins, borders, padding, and the actual content:</p>
+            <pre>
+                <code>
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    border: 5px solid black;
+}
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div style="width: 100px; height: 100px; margin: 10px; padding: 20px; border: 5px solid black;">
+                This div demonstrates the box model.
+            </div>
+            <p>Text flow in CSS can be controlled using properties like <code>float</code> and <code>clear</code>:</p>
+            <pre>
+                <code>
+.float-left {
+    float: left;
+}
+.clear-both {
+    clear: both;
+}
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <div class="float-left" style="width: 100px; height: 100px; background-color: lightgray; float: left;">
+                This div floats to the left.
+            </div>
+            <div style="background-color: lightblue;">
+                This text flows around the floating div.
+            </div>
+            <div class="clear-both" style="clear: both;">
+                This text is below the floating div.
+            </div>
+            <hr>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Test different CSS properties:</p>
+            <form>
+                <label for="color">Background Color:</label>
+                <input type="color" id="bgColor" name="bgColor">
+                <button type="button" onclick="applyBgColor()">Apply</button>
+            </form>
+            <div id="testDiv" style="width: 100px; height: 100px; border: 1px solid #000;">
+                Test Div
+            </div>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of CSS:</p>
+            <form id="quizForm">
+                <p>1. Which property is used to change the background color of an element?</p>
+                <input type="radio" name="question1" value="a"> <code>background-color</code><br>
+                <input type="radio" name="question1" value="b"> <code>color</code><br>
+                <input type="radio" name="question1" value="c"> <code>bgcolor</code><br>
+
+                <p>2. How do you make an element's width and height dependent on its content?</p>
+                <input type="radio" name="question2" value="a"> <code>auto</code><br>
+                <input type="radio" name="question2" value="b"> <code>content</code><br>
+                <input type="radio" name="question2" value="c"> <code>fit-content</code><br>
+
+                <button type="button" onclick="checkQuiz(4)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create an HTML page with an inline style, embedded style, and external style. Show the differences.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!-- Inline Style --&gt;
+&lt;p style="color: red;"&gt;This is an inline styled paragraph.&lt;/p&gt;
+
+&lt;!-- Embedded Style --&gt;
+&lt;style&gt;
+    .embedded-style {
+        color: blue;
+    }
+&lt;/style&gt;
+&lt;p class="embedded-style"&gt;This is an embedded styled paragraph.&lt;/p&gt;
+
+&lt;!-- External Style --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;p class="external-style"&gt;This is an external styled paragraph.&lt;/p&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page with a div that uses absolute and relative positioning. Demonstrate the differences.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!-- Absolute Positioning --&gt;
+&lt;div style="position: absolute; top: 50px; left: 100px; background-color: lightgray;"&gt;This is an absolutely positioned element.&lt;/div&gt;
+
+&lt;!-- Relative Positioning --&gt;
+&lt;div style="position: relative; top: 20px; left: 30px; background-color: lightgray;"&gt;This is a relatively positioned element.&lt;/div&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>3. Create an HTML page with a div that has a background color and an image. Use different CSS background properties.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;div style="width: 300px; height: 200px; background-color: lightblue; background-image: url('images/example2.png'); background-repeat: no-repeat; background-size: cover;"&gt;
+    This div has a background image and color.
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

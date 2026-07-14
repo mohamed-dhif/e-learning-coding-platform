@@ -1,0 +1,368 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Advanced Form Elements and Page Structures</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 3: Advanced Form Elements and Page Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Form Input Types</h2>
+            <p>HTML5 introduced 13 new input types that enhance form functionality. Below are examples of some of these types:</p>
+            <hr>
+            <h3>Text Input</h3>
+            <pre>
+                <code>
+&lt;label for="textInput"&gt;Text Input:&lt;/label&gt;
+&lt;input type="text" id="textInput" name="textInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="textInput">Text Input:</label>
+            <input type="text" id="textInput" name="textInput">
+            <hr>
+
+            <h3>Email Input</h3>
+            <pre>
+                <code>
+&lt;label for="emailInput"&gt;Email Input:&lt;/label&gt;
+&lt;input type="email" id="emailInput" name="emailInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="emailInput">Email Input:</label>
+            <input type="email" id="emailInput" name="emailInput">
+            <hr>
+
+            <h3>Date Input</h3>
+            <pre>
+                <code>
+&lt;label for="dateInput"&gt;Date Input:&lt;/label&gt;
+&lt;input type="date" id="dateInput" name="dateInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="dateInput">Date Input:</label>
+            <input type="date" id="dateInput" name="dateInput">
+            <hr>
+
+            <h3>Range Input</h3>
+            <pre>
+                <code>
+&lt;label for="rangeInput"&gt;Range Input:&lt;/label&gt;
+&lt;input type="range" id="rangeInput" name="rangeInput" min="0" max="100"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="rangeInput">Range Input:</label>
+            <input type="range" id="rangeInput" name="rangeInput" min="0" max="100">
+            <hr>
+
+            <h3>Color Input</h3>
+            <pre>
+                <code>
+&lt;label for="colorInput"&gt;Color Input:&lt;/label&gt;
+&lt;input type="color" id="colorInput" name="colorInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="colorInput">Color Input:</label>
+            <input type="color" id="colorInput" name="colorInput">
+            <hr>
+
+            <h3>Number Input</h3>
+            <pre>
+                <code>
+&lt;label for="numberInput"&gt;Number Input:&lt;/label&gt;
+&lt;input type="number" id="numberInput" name="numberInput" min="0" max="100"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="numberInput">Number Input:</label>
+            <input type="number" id="numberInput" name="numberInput" min="0" max="100">
+            <hr>
+
+            <h3>Tel Input</h3>
+            <pre>
+                <code>
+&lt;label for="telInput"&gt;Telephone Input:&lt;/label&gt;
+&lt;input type="tel" id="telInput" name="telInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="telInput">Telephone Input:</label>
+            <input type="tel" id="telInput" name="telInput">
+            <hr>
+
+            <h3>URL Input</h3>
+            <pre>
+                <code>
+&lt;label for="urlInput"&gt;URL Input:&lt;/label&gt;
+&lt;input type="url" id="urlInput" name="urlInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="urlInput">URL Input:</label>
+            <input type="url" id="urlInput" name="urlInput">
+            <hr>
+
+            <h3>Week Input</h3>
+            <pre>
+                <code>
+&lt;label for="weekInput"&gt;Week Input:&lt;/label&gt;
+&lt;input type="week" id="weekInput" name="weekInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="weekInput">Week Input:</label>
+            <input type="week" id="weekInput" name="weekInput">
+            <hr>
+
+            <h3>Time Input</h3>
+            <pre>
+                <code>
+&lt;label for="timeInput"&gt;Time Input:&lt;/label&gt;
+&lt;input type="time" id="timeInput" name="timeInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="timeInput">Time Input:</label>
+            <input type="time" id="timeInput" name="timeInput">
+            <hr>
+
+            <h3>Month Input</h3>
+            <pre>
+                <code>
+&lt;label for="monthInput"&gt;Month Input:&lt;/label&gt;
+&lt;input type="month" id="monthInput" name="monthInput"&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="monthInput">Month Input:</label>
+            <input type="month" id="monthInput" name="monthInput">
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Autocomplete Attribute</h2>
+            <p>The <code>autocomplete</code> attribute specifies whether a form or input field should have autocomplete enabled:</p>
+            <pre>
+                <code>
+&lt;form autocomplete="on"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <form autocomplete="on">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <input type="submit" value="Submit">
+            </form>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Datalist Element</h2>
+            <p>The <code>&lt;datalist&gt;</code> element specifies a list of pre-defined options for an <code>&lt;input&gt;</code> element:</p>
+            <pre>
+                <code>
+&lt;label for="browser"&gt;Choose your browser from the list:&lt;/label&gt;
+&lt;input list="browsers" id="browser" name="browser"&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Safari"&gt;
+    &lt;option value="Opera"&gt;
+    &lt;option value="Edge"&gt;
+&lt;/datalist&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Opera">
+                <option value="Edge">
+            </datalist>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Page Structures</h2>
+            <p>HTML5 introduces nine new page structure elements to organize content:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code></li>
+                <li><code>&lt;nav&gt;</code></li>
+                <li><code>&lt;article&gt;</code></li>
+                <li><code>&lt;section&gt;</code></li>
+                <li><code>&lt;aside&gt;</code></li>
+                <li><code>&lt;footer&gt;</code></li>
+                <li><code>&lt;figure&gt;</code></li>
+                <li><code>&lt;figcaption&gt;</code></li>
+                <li><code>&lt;main&gt;</code></li>
+            </ul>
+            <p>These elements help create more semantic HTML documents.</p>
+            <hr>
+        </section>
+
+        <section class="content">
+            <h2>Collapsible Sections with Summary and Details</h2>
+            <p>The <code>&lt;summary&gt;</code> and <code>&lt;details&gt;</code> elements create collapsible sections:</p>
+            <pre>
+                <code>
+&lt;details&gt;
+    &lt;summary&gt;More Information&lt;/summary&gt;
+    &lt;p&gt;This is additional information that can be collapsed.&lt;/p&gt;
+&lt;/details&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <details>
+                <summary>More Information</summary>
+                <p>This is additional information that can be collapsed.</p>
+            </details>
+            <hr>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter your name and see a personalized greeting:</p>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button onclick="showGreeting()">Show Greeting</button>
+            <p id="greeting"></p>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of advanced form elements:</p>
+            <form id="quizForm">
+                <p>1. Which input type is used for selecting a date?</p>
+                <input type="radio" name="question1" value="a"> <code>date</code><br>
+                <input type="radio" name="question1" value="b"> <code>datetime</code><br>
+                <input type="radio" name="question1" value="c"> <code>time</code><br>
+
+                <p>2. What is the purpose of the <code>&lt;datalist&gt;</code> element?</p>
+                <input type="radio" name="question2" value="a"> To define a list of pre-defined options for an input element<br>
+                <input type="radio" name="question2" value="b"> To create a dropdown list<br>
+                <input type="radio" name="question2" value="c"> To create a multi-line text input<br>
+
+                <button type="button" onclick="checkQuiz(3)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create an HTML page with various form input types.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Form Input Types&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;label for="textInput"&gt;Text Input:&lt;/label&gt;
+        &lt;input type="text" id="textInput" name="textInput"&gt;
+        &lt;br&gt;
+        &lt;label for="emailInput"&gt;Email Input:&lt;/label&gt;
+        &lt;input type="email" id="emailInput" name="emailInput"&gt;
+        &lt;br&gt;
+        &lt;label for="dateInput"&gt;Date Input:&lt;/label&gt;
+        &lt;input type="date" id="dateInput" name="dateInput"&gt;
+        &lt;br&gt;
+        &lt;label for="colorInput"&gt;Color Input:&lt;/label&gt;
+        &lt;input type="color" id="colorInput" name="colorInput"&gt;
+        &lt;br&gt;
+        &lt;label for="rangeInput"&gt;Range Input:&lt;/label&gt;
+        &lt;input type="range" id="rangeInput" name="rangeInput" min="0" max="100"&gt;
+        &lt;br&gt;
+        &lt;label for="numberInput"&gt;Number Input:&lt;/label&gt;
+        &lt;input type="number" id="numberInput" name="numberInput" min="0" max="100"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page with autocomplete and datalist elements.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Autocomplete and Datalist&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form autocomplete="on"&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+        &lt;br&gt;
+        &lt;label for="browser"&gt;Choose your browser from the list:&lt;/label&gt;
+        &lt;input list="browsers" id="browser" name="browser"&gt;
+        &lt;datalist id="browsers"&gt;
+            &lt;option value="Chrome"&gt;
+            &lt;option value="Firefox"&gt;
+            &lt;option value="Safari"&gt;
+            &lt;option value="Opera"&gt;
+            &lt;option value="Edge"&gt;
+        &lt;/datalist&gt;
+        &lt;br&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

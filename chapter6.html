@@ -1,0 +1,203 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Introduction to JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chapter 6: Introduction to JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter1.html">Chapter 1</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Introduction to JavaScript</h2>
+            <p>JavaScript is a versatile programming language used to create dynamic and interactive web content. It is a client-side scripting language that can be embedded directly into HTML pages.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    alert('Hello, world!');
+&lt;/script&gt;
+                </code>
+            </pre>
+            <p>Including JavaScript in an HTML file can be done using the <code>&lt;script&gt;</code> tag. The <code>&lt;script&gt;</code> tag can be placed in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> section of the HTML document:</p>
+            <pre>
+                <code>
+&lt;head&gt;
+    &lt;script&gt;
+        alert('Hello from the head section!');
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        alert('Hello from the body section!');
+    &lt;/script&gt;
+&lt;/body&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Variables</h2>
+            <p>Variables in JavaScript are used to store data values. You can declare a variable using the <code>var</code>, <code>let</code>, or <code>const</code> keyword.</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var x = 5;
+    let y = 10;
+    const z = 15;
+    console.log(x, y, z);
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Simple Calculations</h2>
+            <p>JavaScript can be used to perform simple calculations such as addition, subtraction, multiplication, and division:</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var a = 10;
+    var b = 20;
+    var sum = a + b;
+    var difference = b - a;
+    var product = a * b;
+    var quotient = b / a;
+    console.log('Sum: ' + sum);
+    console.log('Difference: ' + difference);
+    console.log('Product: ' + product);
+    console.log('Quotient: ' + quotient);
+&lt;/script&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="content">
+            <h2>Using <code>document.write()</code></h2>
+            <p>The <code>document.write()</code> method can be used to write HTML content directly into the document. This method can also include JavaScript variables:</p>
+            <pre>
+                <code>
+&lt;script&gt;
+    var name = "John";
+    document.write("&lt;p&gt;Hello, " + name + "! Welcome to JavaScript learning.&lt;/p&gt;");
+&lt;/script&gt;
+                </code>
+            </pre>
+            <p><strong>Result:</strong></p>
+            <script>
+                var name = "John";
+                document.write("<p>Hello, " + name + "! Welcome to JavaScript learning.</p>");
+            </script>
+        </section>
+
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter your name and see a personalized greeting:</p>
+            <input type="text" id="nameInputChapter6" placeholder="Enter your name">
+            <button onclick="showGreetingChapter6()">Show Greeting</button>
+        </section>
+
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of JavaScript basics:</p>
+            <form id="quizForm">
+                <p>1. How do you write "Hello, World!" in an alert box?</p>
+                <input type="radio" name="question1" value="a"> <code>alert("Hello, World!");</code><br>
+                <input type="radio" name="question1" value="b"> <code>alertBox("Hello, World!");</code><br>
+                <input type="radio" name="question1" value="c"> <code>msg("Hello, World!");</code><br>
+
+                <p>2. Which keyword is used to declare a variable in JavaScript?</p>
+                <input type="radio" name="question2" value="a"> <code>var</code><br>
+                <input type="radio" name="question2" value="b"> <code>let</code><br>
+                <input type="radio" name="question2" value="c"> <code>const</code><br>
+                <input type="radio" name="question2" value="d"> <code>All of the above</code><br>
+
+                <button type="button" onclick="checkQuiz(6)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <section class="exercises">
+            <h3>Exercises</h3>
+            <div class="exercise">
+                <p>1. Create an HTML page with a JavaScript function that displays an alert message when a button is clicked.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript Alert&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function showAlert() {
+            alert('Hello, world!');
+        }
+    &lt;/script&gt;
+    &lt;button onclick="showAlert()"&gt;Click me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+            <div class="exercise">
+                <p>2. Create an HTML page with an input field and a button. When the button is clicked, display the entered text in an alert box.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;JavaScript Input Alert&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function showInput() {
+            var userInput = document.getElementById('userInput').value;
+            alert(userInput);
+        }
+    &lt;/script&gt;
+    &lt;input type="text" id="userInput" placeholder="Enter something"&gt;
+    &lt;button onclick="showInput()"&gt;Show Input&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!-- 
+    Names: Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194 
+    Course: CSC307 Web Design and Programming
+    Instructor: Dr. Farid Ibrahim
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Introduction to HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+
+        <!-- Page Header -->
+        <h1>Chapter 1: Introduction to HTML</h1>
+        <nav>
+            <!-- Navigation Menu -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chapter2.html">Chapter 2</a></li>
+                <li><a href="chapter3.html">Chapter 3</a></li>
+                <li><a href="chapter4.html">Chapter 4</a></li>
+                <li><a href="chapter5.html">Chapter 5</a></li>
+                <li><a href="chapter6.html">Chapter 6</a></li>
+                <li><a href="chapter7.html">Chapter 7</a></li>
+                <li><a href="chapter8.html">Chapter 8</a></li>
+                <li><a href="chapter9.html">Chapter 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Introduction Section -->
+        <section class="content">
+            <h2>What is HTML?</h2>
+            <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages.</p>
+        </section>
+        <!-- Basic HTML Structure -->
+        <section class="content">
+            <h2>Basic HTML Structure</h2>
+            <p>Every HTML document has a basic structure. Here is an example:</p>
+            <pre>
+                <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code>
+            </pre>
+        </section>
+
+        <!-- Interactive Example -->
+        <section class="interactive">
+            <h3>Interactive Example</h3>
+            <p>Enter your name and see a greeting message:</p>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button onclick="showGreeting()">Show Greeting</button>
+            <p id="greeting"></p>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz">
+            <h3>Quiz</h3>
+            <p>Test your knowledge of HTML:</p>
+            <form id="quizForm">
+                <p>1. What does HTML stand for?</p>
+                <input type="radio" name="question1" value="a"> HyperText Markup Language<br>
+                <input type="radio" name="question1" value="b"> HomeTool Markup Language<br>
+                <input type="radio" name="question1" value="c"> Hyperlinks and Text Markup Language<br>
+                <button type="button" onclick="checkQuiz(1)">Submit</button>
+            </form>
+            <p id="quizResult"></p>
+        </section>
+
+        <!-- Exercises Section -->
+        <section class="exercises">
+            <h3>Exercises</h3>
+
+            <!-- Exercise 1 -->
+            <div class="exercise">
+                <p>1. Create an HTML document with a heading and a paragraph.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <pre>
+                        <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;My First HTML&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;My First Heading&lt;/h1&gt;
+                            &lt;p&gt;My first paragraph.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdullah Al Wazzan 1080027, Mohamed Dhif 1089194, Dr. Farid Ibrahim CSC307 Course All rights reserved. |</p>
+    </footer>
+    <img src="images/logo.png" alt="Logo" class="logo">
+</body>
+</html>
